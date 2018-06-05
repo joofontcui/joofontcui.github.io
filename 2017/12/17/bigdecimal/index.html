@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.joofont.com">
-  <title>Archives | Hexo</title>
+  <title>BigDecimal | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://www.joofont.com/archives/index.html">
+  <meta name="description" content="float和Double只能用来做科学计算或者是工程计算;在商业计算中,对数字精度要求较高,必须使用 BigInteger 类和 BigDecimal 类 构造 BigDecimal 对象常用以下方法:  BigDecimal BigDecimal(double d); //不允许使用   BigDecimal BigDecimal(String s); //常用,推荐使用   static Bi">
+<meta name="keywords" content="BigDecimal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BigDecimal">
+<meta property="og:url" content="http://www.joofont.com/2017/12/17/bigdecimal/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="float和Double只能用来做科学计算或者是工程计算;在商业计算中,对数字精度要求较高,必须使用 BigInteger 类和 BigDecimal 类 构造 BigDecimal 对象常用以下方法:  BigDecimal BigDecimal(double d); //不允许使用   BigDecimal BigDecimal(String s); //常用,推荐使用   static Bi">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-05T03:14:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="BigDecimal">
+<meta name="twitter:description" content="float和Double只能用来做科学计算或者是工程计算;在商业计算中,对数字精度要求较高,必须使用 BigInteger 类和 BigDecimal 类 构造 BigDecimal 对象常用以下方法:  BigDecimal BigDecimal(double d); //不允许使用   BigDecimal BigDecimal(String s); //常用,推荐使用   static Bi">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,74 +155,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-bigdecimal" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/17/mysqlKey/" class="archive-article-date">
-  	<time datetime="2017-12-17T07:23:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/17/mysqlKey/">MySQL索引</a>
+    <h1 class="article-title" itemprop="name">
+      BigDecimal
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/17/bigdecimal/" class="archive-article-date">
+        
+        <a href="/2017/12/17/bigdecimal/" class="archive-article-date">
   	<time datetime="2017-12-16T16:25:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/17/bigdecimal/">BigDecimal</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>float和Double只能用来做科学计算或者是工程计算;在商业计算中,对数字精度要求较高,必须使用 BigInteger 类和 BigDecimal 类</p>
+<p>构造 BigDecimal 对象常用以下方法: </p>
+<pre><code>BigDecimal BigDecimal(double d); //不允许使用  
+BigDecimal BigDecimal(String s); //常用,推荐使用  
+static BigDecimal valueOf(double d); //常用,推荐使用  
+</code></pre><a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>显示长度</th>
+<th>数据库类型</th>
+<th>JAVA类型</th>
+<th>JDBC类型索引(int)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VARCHAR</td>
+<td>L+N</td>
+<td>VARCHAR</td>
+<td>java.lang.String</td>
+<td>12</td>
+</tr>
+<tr>
+<td>CHAR</td>
+<td>N</td>
+<td>CHAR</td>
+<td>java.lang.String</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>L+N</td>
+<td>BLOB</td>
+<td>java.lang.byte[]</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>65535</td>
+<td>VARCHAR</td>
+<td>java.lang.String</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td>4</td>
+<td>INTEGER UNSIGNED</td>
+<td>java.lang.Long</td>
+<td>4</td>
+</tr>
+<tr>
+<td>TINYINT</td>
+<td>3</td>
+<td>TINYINT UNSIGNED</td>
+<td>java.lang.Integer</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>5</td>
+<td>SMALLINT UNSIGNED</td>
+<td>java.lang.Integer</td>
+<td>5</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>8</td>
+<td>MEDIUMINT UNSIGNED</td>
+<td>java.lang.Integer</td>
+<td>4</td>
+</tr>
+<tr>
+<td>BIT</td>
+<td>1</td>
+<td>BIT</td>
+<td>java.lang.Boolean</td>
+<td>-7</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>20</td>
+<td>BIGINT UNSIGNED</td>
+<td>java.math.BigInteger</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>4+8</td>
+<td>FLOAT</td>
+<td>java.lang.Float</td>
+<td>7</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>22</td>
+<td>DOUBLE</td>
+<td>java.lang.Double</td>
+<td>8</td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td>11</td>
+<td>DECIMAL</td>
+<td>java.math.BigDecimal</td>
+<td>3</td>
+</tr>
+<tr>
+<td>BOOLEAN</td>
+<td>1</td>
+<td>同TINYINT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ID</td>
+<td>11</td>
+<td>PK(INTEGER UNSIGNED)</td>
+<td>java.lang.Long</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>10</td>
+<td>DATE</td>
+<td>java.sql.Date</td>
+<td>91</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>8</td>
+<td>TIME</td>
+<td>java.sql.Time</td>
+<td>92</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>19</td>
+<td>DATETIME</td>
+<td>java.sql.Timestamp</td>
+<td>93</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>19</td>
+<td>TIMESTAMP</td>
+<td>java.sql.Timestamp</td>
+<td>93</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td>4</td>
+<td>YEAR</td>
+<td>java.sql.Date</td>
+<td>91</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public BigDecimal add(BigDecimal value);        //加法运算</span><br><span class="line">public BigDecimal subtract(BigDecimal value);   //减法运算</span><br><span class="line">public BigDecimal multiply(BigDecimal value);   //乘法运算</span><br><span class="line">public BigDecimal divide (BigDecimal value,RoundingMode mode);//除法运算,第二个参数为精度</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 求余数</span><br><span class="line"> * 返回值为 (this % divisor) 的 BigDecimal</span><br><span class="line"> */</span><br><span class="line">BigDecimal remainder(BigDecimal divisor);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 求相反数</span><br><span class="line"> * 返回值是 (-this) 的 BigDecimal</span><br><span class="line"> */</span><br><span class="line">BigDecimal negate();</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 将此 BigDecimal 与指定的 BigDecimal 比较</span><br><span class="line"> * 根据此方法,值相等但具有不同标度的两个 BigDecimal 对象（如，2.0 和 2.00）被认为是相等的;</span><br><span class="line"> * 相对六个 boolean 比较运算符 (&lt;, ==, &gt;, &gt;=, !=, &lt;=) 中每一个运算符的各个方法,优先提供此方法;</span><br><span class="line"> * 建议使用以下语句执行上述比较：(x.compareTo(y) &lt;op&gt; 0), 其中 &lt;op&gt; 是六个比较运算符之一;</span><br><span class="line"> *</span><br><span class="line"> * 指定者：接口 Comparable&lt;BigDecimal&gt; 中的 compareTo</span><br><span class="line"> * 返回：当此 BigDecimal 在数字上小于、等于或大于 val 时，返回 -1、0 或 1</span><br><span class="line"> */</span><br><span class="line">int compareTo(BigDecimal val);</span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<p><a href="http://blog.csdn.net/wangjunjun2008/article/details/45559655" target="_blank" rel="noopener">http://blog.csdn.net/wangjunjun2008/article/details/45559655</a><br><a href="https://www.cnblogs.com/henuyuxiang/p/6676660.html" target="_blank" rel="noopener">https://www.cnblogs.com/henuyuxiang/p/6676660.html</a></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -229,350 +378,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.joofont.com/2017/12/17/bigdecimal/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/16/gitAndGitflow/" class="archive-article-date">
-  	<time datetime="2017-12-16T15:48:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-16</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/12/17/mysqlKey/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL索引
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/16/gitAndGitflow/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git &amp; gitflow</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/16/gitAndGitflow/">git &amp; gitflow</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">git、gitflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/12/redisWatch/" class="archive-article-date">
-  	<time datetime="2017-12-12T14:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/redisWatch/">秒杀系统</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java、Redis、高并发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/12/RESTful/" class="archive-article-date">
-  	<time datetime="2017-12-12T13:29:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/RESTful/">RESTful</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/03/redisForMore/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:45:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/redisForMore/">Redis存储复杂类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">List/Map</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/03/proAlwaysDead/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:21:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/proAlwaysDead/">SpringCloud微服务经常挂掉的原因</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/04/sqlGenerator/" class="archive-article-date">
-  	<time datetime="2017-11-04T09:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/04/sqlGenerator/">Mybatis代码生成工具</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/01/Chandao/" class="archive-article-date">
-  	<time datetime="2017-11-01T12:52:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/Chandao/">禅道搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/Nexus/" class="archive-article-date">
-  	<time datetime="2017-10-31T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/Nexus/">Nexus搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+    <section id="comments">
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="BigDecimal" ></div> 
+        <script type="text/javascript"> 
+        (function(){ 
+        var appid = 'cytiiq6ug'; 
+        var conf = 'prod_97bf6c8b8cf07f4644716a68f5e7af71'; 
+        var width = window.innerWidth || document.documentElement.clientWidth; 
+        if (width < 960) { 
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    </section>
   
 
 
@@ -605,8 +522,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

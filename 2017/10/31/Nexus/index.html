@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.joofont.com">
-  <title>Archives | Hexo</title>
+  <title>Nexus搭建 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://www.joofont.com/archives/index.html">
+  <meta name="description" content="概念Nexus 是Maven仓库管理器，如果你使用Maven，你可以从Maven中央仓库 下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少">
+<meta name="keywords" content="项目管理,Maven,工具搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nexus搭建">
+<meta property="og:url" content="http://www.joofont.com/2017/10/31/Nexus/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="概念Nexus 是Maven仓库管理器，如果你使用Maven，你可以从Maven中央仓库 下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://oysmxnph6.bkt.clouddn.com/1512230798.png">
+<meta property="og:image" content="http://oysmxnph6.bkt.clouddn.com/1512230868%281%29.jpg">
+<meta property="og:image" content="http://oysmxnph6.bkt.clouddn.com/1512230942%281%29.jpg">
+<meta property="og:updated_time" content="2018-06-05T03:14:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Nexus搭建">
+<meta name="twitter:description" content="概念Nexus 是Maven仓库管理器，如果你使用Maven，你可以从Maven中央仓库 下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少">
+<meta name="twitter:image" content="http://oysmxnph6.bkt.clouddn.com/1512230798.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,394 +159,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nexus" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/17/mysqlKey/" class="archive-article-date">
-  	<time datetime="2017-12-17T07:23:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/17/mysqlKey/">MySQL索引</a>
+    <h1 class="article-title" itemprop="name">
+      Nexus搭建
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/17/bigdecimal/" class="archive-article-date">
-  	<time datetime="2017-12-16T16:25:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/17/bigdecimal/">BigDecimal</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BigDecimal</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/16/gitAndGitflow/" class="archive-article-date">
-  	<time datetime="2017-12-16T15:48:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/16/gitAndGitflow/">git &amp; gitflow</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">git、gitflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/12/redisWatch/" class="archive-article-date">
-  	<time datetime="2017-12-12T14:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/redisWatch/">秒杀系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java、Redis、高并发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/12/RESTful/" class="archive-article-date">
-  	<time datetime="2017-12-12T13:29:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/12/RESTful/">RESTful</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/03/redisForMore/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:45:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/redisForMore/">Redis存储复杂类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">List/Map</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/03/proAlwaysDead/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:21:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/proAlwaysDead/">SpringCloud微服务经常挂掉的原因</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/04/sqlGenerator/" class="archive-article-date">
-  	<time datetime="2017-11-04T09:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/04/sqlGenerator/">Mybatis代码生成工具</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/01/Chandao/" class="archive-article-date">
-  	<time datetime="2017-11-01T12:52:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/Chandao/">禅道搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/Nexus/" class="archive-article-date">
+        
+        <a href="/2017/10/31/Nexus/" class="archive-article-date">
   	<time datetime="2017-10-31T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/Nexus/">Nexus搭建</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Nexus 是Maven仓库管理器，如果你使用Maven，你可以从Maven中央仓库 下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少的内存，基于简单文件系统而非数据库。这些优点使其日趋成为最流行的Maven仓库管理器。</p>
+<a id="more"></a>
+<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><p>私服是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。</p>
+<p>优势：</p>
+<ol>
+<li>减少对于外网的网络传输 </li>
+<li>提高开发效率 </li>
+<li>个性化定义自己的仓库</li>
+</ol>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>nexus 下载页面：<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a></p>
+<p>解压到当前目录</p>
+<pre><code>tar -zxvf nexus-2.14.4-03-bundle.tar.gz
+</code></pre><p>这时在nexus目录有两个文件夹，分别是nexus-2.14.4-03和sonatype-work。前一个是nexus 服务所在的文件夹，后一个是私有库目录</p>
+<p>解压后到 bin 目录可以看到启动脚本</p>
+<blockquote>
+<p>./nexus start 启动<br>./nexus stop 停止<br>./nexus status 状态</p>
+</blockquote>
+<p>配置文件：nexus/nexus-2.14.5-02/conf/nexus.properties</p>
+<pre><code>application-port=8889
+application-host=0.0.0.0
+nexus-webapp=${bundleBasedir}/nexus
+nexus-webapp-context-path=/nexus
+nexus-work=${bundleBasedir}/../sonatype-work/nexus
+runtime=${bundleBasedir}/nexus/WEB-INF
+</code></pre><p>启动后稍等片刻访问：域名或ip:8889/</p>
+<p>默认用户</p>
+<blockquote>
+<p>超级管理员：admin 密码：admin123 </p>
+</blockquote>
+<p><img src="http://oysmxnph6.bkt.clouddn.com/1512230798.png" alt="image"></p>
+<h1 id="仓库的区别"><a href="#仓库的区别" class="headerlink" title="仓库的区别"></a>仓库的区别</h1><ul>
+<li>group 仓库组： Nexus 通过仓库组的概念统一管理多个仓库，在项目中直接请求仓库组即可请求到仓库组管理的多个仓库</li>
+<li>hosted 宿主仓库： 主要用于发布内部项目构件或第三方的项目构件 （如购买商业的构件）以及无法从公共仓库获取的构件（如 oracle 的 JDBC 驱动）</li>
+<li>proxy 代理仓库： 从远程中央仓库中寻找数据的仓库</li>
+<li>releases 内部的模块中release模块的发布仓库</li>
+<li>snapshots 内部的SNAPSHOT模块的仓库</li>
+<li>3rd party 第三方依赖的仓库，这个数据通常是由内部人员自行下载之后发布上去</li>
+</ul>
+<p>切换Nexus中央仓库，修改索引<br><img src="http://oysmxnph6.bkt.clouddn.com/1512230868%281%29.jpg" alt="image"></p>
+<p>将相关仓库加到public仓库地址，这样才能正常下载到依赖<br><img src="http://oysmxnph6.bkt.clouddn.com/1512230942%281%29.jpg" alt="image"></p>
+<h1 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h1><pre><code>&lt;distributionManagement&gt;
+    &lt;repository&gt;
+        &lt;id&gt;zdk-releases&lt;/id&gt;
+        &lt;name&gt;Release&lt;/name&gt;
+        &lt;url&gt;http://ip:8889/nexus/content/repositories/releases/&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;snapshotRepository&gt;
+        &lt;id&gt;zdk-snapshots&lt;/id&gt;
+        &lt;name&gt;Snapshot&lt;/name&gt;
+        &lt;url&gt;http://ip:8889/nexus/content/repositories/snapshots/&lt;/url&gt;
+    &lt;/snapshotRepository&gt;
+&lt;/distributionManagement&gt;
+</code></pre><h1 id="修改setting-xml"><a href="#修改setting-xml" class="headerlink" title="修改setting.xml"></a>修改setting.xml</h1><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
 
-        <div class="article-info info-on-right">
-          
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
+
+&lt;localRepository&gt;C:\Users\Administrator.m2\repository&lt;/localRepository&gt;
+
+&lt;pluginGroups&gt;
+
+&lt;/pluginGroups&gt;
+
+&lt;proxies&gt;
+
+&lt;/proxies&gt;
+
+&lt;servers&gt;
+  &lt;server&gt; 
+    &lt;id&gt;nexus-releases&lt;/id&gt; &lt;!--这个ID要与下面的repository中的ID一致--&gt;
+    &lt;username&gt;admin&lt;/username&gt; &lt;!--nexus中配置的用户名密码--&gt;
+    &lt;password&gt;admin&lt;/password&gt; 
+  &lt;/server&gt;
+  &lt;server&gt; 
+    &lt;id&gt;nexus-snapshots&lt;/id&gt; 
+    &lt;username&gt;admin&lt;/username&gt; 
+    &lt;password&gt;admin&lt;/password&gt; 
+  &lt;/server&gt; 
+&lt;/servers&gt;
+
+&lt;mirrors&gt;
+  &lt;mirror&gt;
+    &lt;id&gt;central&lt;/id&gt;
+    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+    &lt;name&gt;central repository&lt;/name&gt;
+    &lt;url&gt;http://ip地址:8889/nexus/content/groups/public/&lt;/url&gt;
+  &lt;/mirror&gt;
+&lt;/mirrors&gt;
+
+   &lt;profiles&gt;
+      &lt;profile&gt;
+       &lt;id&gt;nexus&lt;/id&gt;
+       &lt;repositories&gt;
+         &lt;repository&gt;
+          &lt;id&gt;nexus&lt;/id&gt;
+          &lt;name&gt;Nexus&lt;/name&gt;
+          &lt;url&gt;http://ip地址:8889/nexus/content/groups/public/&lt;/url&gt;
+          &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
+          &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+         &lt;id&gt;nexus&lt;/id&gt;
+         &lt;name&gt;Nexus&lt;/name&gt;
+         &lt;url&gt;http://ip地址:8889/nexus/content/groups/public/&lt;/url&gt;
+         &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
+         &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;
+       &lt;/pluginRepository&gt;
+     &lt;/pluginRepositories&gt;
+   &lt;/profile&gt;
+
+   &lt;profile&gt;
+     &lt;id&gt;nexus-snapshots&lt;/id&gt;
+     &lt;repositories&gt;
+       &lt;repository&gt;
+        &lt;id&gt;nexus-snapshots&lt;/id&gt;
+        &lt;name&gt;nexus-snapshots&lt;/name&gt;
+        &lt;url&gt;http://ip地址:8889/nexus/content/repositories/snapshots/&lt;/url&gt;
+        &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
+        &lt;snapshots&gt;
+          &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
+          &lt;checksumPolicy&gt;warn&lt;/checksumPolicy&gt;
+        &lt;/snapshots&gt;
+      &lt;/repository&gt;
+    &lt;/repositories&gt;
+    &lt;pluginRepositories&gt;
+      &lt;pluginRepository&gt;
+       &lt;id&gt;nexus-snapshots&lt;/id&gt;
+       &lt;name&gt;nexus-snapshots&lt;/name&gt;
+       &lt;url&gt;http://ip地址:8889/nexus/content/repositories/snapshots/&lt;/url&gt;
+       &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
+       &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
+        &lt;checksumPolicy&gt;warn&lt;/checksumPolicy&gt;
+      &lt;/snapshots&gt;
+    &lt;/pluginRepository&gt;
+  &lt;/pluginRepositories&gt;
+
+&lt;/profile&gt;
+
+&lt;/profiles&gt;
+
+ &lt;activeProfiles&gt;
+   &lt;activeProfile&gt;nexus&lt;/activeProfile&gt;
+   &lt;activeProfile&gt;nexus-snapshots&lt;/activeProfile&gt;
+ &lt;/activeProfiles&gt;
+
+&lt;/settings&gt;
+</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://www.cnblogs.com/quanyongan/archive/2013/04/24/3037589.html" target="_blank" rel="noopener">http://www.cnblogs.com/quanyongan/archive/2013/04/24/3037589.html</a><br><a href="https://segmentfault.com/a/1190000009467582" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009467582</a><br><a href="http://blog.csdn.net/johnstrive/article/details/49894195" target="_blank" rel="noopener">http://blog.csdn.net/johnstrive/article/details/49894195</a><br><a href="http://www.jianshu.com/p/5effe321bff1" target="_blank" rel="noopener">http://www.jianshu.com/p/5effe321bff1</a><br><a href="http://www.cnblogs.com/dreamroute/p/5440419.html" target="_blank" rel="noopener">http://www.cnblogs.com/dreamroute/p/5440419.html</a><br><a href="https://my.oschina.net/thinwonton/blog/879685" target="_blank" rel="noopener">https://my.oschina.net/thinwonton/blog/879685</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -557,22 +380,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.joofont.com/2017/10/31/Nexus/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+<nav id="article-nav">
+  
+    <a href="/2017/11/01/Chandao/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          禅道搭建
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/28/Svn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Svn搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+    <section id="comments">
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="Nexus搭建" ></div> 
+        <script type="text/javascript"> 
+        (function(){ 
+        var appid = 'cytiiq6ug'; 
+        var conf = 'prod_97bf6c8b8cf07f4644716a68f5e7af71'; 
+        var width = window.innerWidth || document.documentElement.clientWidth; 
+        if (width < 960) { 
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    </section>
   
 
 
@@ -605,8 +524,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
