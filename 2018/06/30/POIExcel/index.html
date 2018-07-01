@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.joofont.com">
-  <title>Archives: 2017/10 | 崔俊的博客</title>
+  <title>POI导出Excel解决方案 | 崔俊的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生苦短，我用python">
-<meta name="keywords" content="开发者,程序猿编程,代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="崔俊的博客">
-<meta property="og:url" content="http://www.joofont.com/archives/2017/10/index.html">
+  <meta name="description" content="由于业务需要，最近要做一个导出40w数据到excel的功能。使用POI来处理大数据，可以解决内存溢出的问题，支持100w以下数据的处理，导出速度大概10w/min。     步骤 流程     1 求数据库中待导出数据的行数   2 根据行数求数据提取次数   3 按次数将数据写入文件">
+<meta name="keywords" content="POI、java、util">
+<meta property="og:type" content="article">
+<meta property="og:title" content="POI导出Excel解决方案">
+<meta property="og:url" content="http://www.joofont.com/2018/06/30/POIExcel/index.html">
 <meta property="og:site_name" content="崔俊的博客">
-<meta property="og:description" content="人生苦短，我用python">
+<meta property="og:description" content="由于业务需要，最近要做一个导出40w数据到excel的功能。使用POI来处理大数据，可以解决内存溢出的问题，支持100w以下数据的处理，导出速度大概10w/min。     步骤 流程     1 求数据库中待导出数据的行数   2 根据行数求数据提取次数   3 按次数将数据写入文件">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-30T04:23:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="崔俊的博客">
-<meta name="twitter:description" content="人生苦短，我用python">
+<meta name="twitter:title" content="POI导出Excel解决方案">
+<meta name="twitter:description" content="由于业务需要，最近要做一个导出40w数据到excel的功能。使用POI来处理大数据，可以解决内存溢出的问题，支持100w以下数据的处理，导出速度大概10w/min。     步骤 流程     1 求数据库中待导出数据的行数   2 根据行数求数据提取次数   3 按次数将数据写入文件">
   
     <link rel="alternative" href="/atom.xml" title="崔俊的博客" type="application/atom+xml">
   
@@ -158,114 +159,211 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-POIExcel" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/Nexus/" class="archive-article-date">
-  	<time datetime="2017-10-31T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/Nexus/">Nexus搭建</a>
+    <h1 class="article-title" itemprop="name">
+      POI导出Excel解决方案
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/30/POIExcel/" class="archive-article-date">
+  	<time datetime="2018-06-30T03:15:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>由于业务需要，最近要做一个导出40w数据到excel的功能。使用POI来处理大数据，可以解决内存溢出的问题，支持100w以下数据的处理，导出速度大概10w/min。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>流程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>求数据库中待导出数据的行数</td>
+</tr>
+<tr>
+<td>2</td>
+<td>根据行数求数据提取次数</td>
+</tr>
+<tr>
+<td>3</td>
+<td>按次数将数据写入文件</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value = &quot;申请下载报表接口&quot;, notes = &quot;申请下载报表接口&quot;, response = BaseResponse.class, httpMethod = &quot;GET&quot;)</span><br><span class="line">@SystemControllerLog(description = &quot;导出置换券报表&quot;, systemLog = SystemLogEnum.SUB_COUPON_MANAGE)</span><br><span class="line">@RequestMapping(value = &quot;/v2/excel&quot;, method = RequestMethod.GET)</span><br><span class="line">public BaseResponse excel(@RequestParam(value = &quot;beginDtStr&quot;, required = false) String beginDtStr,</span><br><span class="line">                              @RequestParam(value = &quot;endDtStr&quot;, required = false) String endDtStr,</span><br><span class="line">                              @RequestParam(value = &quot;pno&quot;, required = false) Integer pno,</span><br><span class="line">                              @RequestParam(value = &quot;cno&quot;, required = false) Integer cno,</span><br><span class="line">                              @RequestParam(value = &quot;ano&quot;, required = false) Integer ano,</span><br><span class="line">                              @RequestParam(value = &quot;isApply&quot;, required = false) Integer isApply,</span><br><span class="line">                              @RequestParam(value = &quot;status&quot;, required = false) Integer status,</span><br><span class="line">                              @RequestParam(value = &quot;key&quot;, required = false) String key,</span><br><span class="line">                              @RequestParam(value = &quot;token&quot;) String token,</span><br><span class="line">                              HttpServletResponse response) throws IOException &#123;</span><br><span class="line">    if(StringUtils.isEmpty(token)) return BizResponse.create(String.valueOf(ExceptionCode.MANAGER_NOT_FOUND.getCode()),ExceptionCode.MANAGER_NOT_FOUND.getMsg());</span><br><span class="line"></span><br><span class="line">    // 判断redis中是否有下载申请记录(5分钟内只允许请求一次)</span><br><span class="line">    ValueOperations valueOperations = redisTemplate.opsForValue();</span><br><span class="line">    Object obj = valueOperations.get(RedisKeyConstants.MANAGE_EXPORT_EXCEL);</span><br><span class="line">    if(null != obj) return BizResponse.create(String.valueOf(ExceptionCode.EXCEL_RECORD_IS_EXIST.getCode()),ExceptionCode.EXCEL_RECORD_IS_EXIST.getMsg());</span><br><span class="line"></span><br><span class="line">    // 获取serverName，判定请求分发到哪台机器</span><br><span class="line">    StringBuffer serverName = new StringBuffer();</span><br><span class="line">    String now = DateFormatUtil.getTimeString();</span><br><span class="line">    FileUtils.readToBuffer(serverName, catalog+&quot;server&quot;);</span><br><span class="line"></span><br><span class="line">    // 拼目录地址，文件保存地址</span><br><span class="line">    String downloadCatalog = catalog+serverName+&quot;/hotel/&quot;;</span><br><span class="line">    String saveCatalog = &quot;/download/&quot;+serverName+&quot;/hotel/&quot;+now+&quot;.xlsx&quot;;</span><br><span class="line">    String fileName = &quot;酒店管理列表(&quot; +DateFormatUtil.getTimeString() + &quot;)&quot;;</span><br><span class="line"></span><br><span class="line">    // 增加申请的记录</span><br><span class="line">    Integer recordId = manageFeignClient.addExcelRecord(fileName, new Date(), saveCatalog, token);</span><br><span class="line">    logger.info(&quot;recordId : &#123;&#125;&quot;, recordId);</span><br><span class="line">    if(null ==  recordId) return BizResponse.create(String.valueOf(ExceptionCode.ADD_EXCEL_RECORD_FAIL.getCode()),ExceptionCode.ADD_EXCEL_RECORD_FAIL.getMsg());</span><br><span class="line"></span><br><span class="line">    // 异步导出报表</span><br><span class="line">    hotelService.exportExcel(recordId, downloadCatalog, now, beginDtStr, endDtStr, pno, cno, ano, isApply, status, key);</span><br><span class="line"></span><br><span class="line">    // 请求成功后，redis中记录下载申请</span><br><span class="line">    valueOperations.set(RedisKeyConstants.MANAGE_EXPORT_EXCEL, &quot;&quot;, 5 * 60 * 1000, TimeUnit.MILLISECONDS);</span><br><span class="line"></span><br><span class="line">    return BaseResponse.success();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="ServiceImpl"><a href="#ServiceImpl" class="headerlink" title="ServiceImpl"></a>ServiceImpl</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">@Async</span><br><span class="line">    @Override</span><br><span class="line">    public void exportExcel(Integer recordId, String url, String fileName, String beginDtStr, String endDtStr, Integer pno, Integer cno, Integer ano, Integer isApply, Integer status, String key) &#123;</span><br><span class="line">        Date beginDt = null;</span><br><span class="line">        Date endDt = null;</span><br><span class="line">        if (StringUtils.isNotBlank(beginDtStr)) beginDt = DateFormatUtil.getString(beginDtStr);</span><br><span class="line">        if (StringUtils.isNotBlank(endDtStr)) endDt = DateFormatUtil.getString(endDtStr);</span><br><span class="line"></span><br><span class="line">        int size = 10000;</span><br><span class="line">        int listSize = hotelDraftVOService.getHotelsCount(beginDt, endDt, pno, cno, ano, isApply, status, key);</span><br><span class="line">        int export_times = listSize / size + 1;</span><br><span class="line"></span><br><span class="line">        if (0 == listSize) throw new StoreException(ExceptionCode.NO_HOTEL_DATA);</span><br><span class="line"></span><br><span class="line">        String columnNames[] = &#123;&quot;酒店ID&quot;, &quot;省&quot;, &quot;市&quot;, &quot;区&quot;, &quot;酒店名称&quot;, &quot;详细地址&quot;, &quot;集团&quot;, &quot;品牌&quot;, &quot;星级&quot;, &quot;状态&quot;, &quot;入驻时间&quot;,</span><br><span class="line">                &quot;业务联系人&quot;, &quot;业务联系人电话&quot;, &quot;预定联系人&quot;, &quot;预定联系人电话&quot;, &quot;财务联系人&quot;, &quot;财务联系人电话&quot;, &quot;状态日志&quot;&#125;;</span><br><span class="line"></span><br><span class="line">        String keys[] = &#123;&quot;hotelId&quot;, &quot;pname&quot;, &quot;cname&quot;, &quot;aname&quot;, &quot;name&quot;, &quot;address&quot;, &quot;hotelCompany&quot;, &quot;hotelCompanyBrand&quot;, &quot;hotelLevel&quot;, &quot;allStatus&quot;,</span><br><span class="line">                &quot;onlineDtStr&quot;, &quot;businessPerson&quot;, &quot;businessPhone&quot;, &quot;contactPerson&quot;, &quot;contactPhone&quot;, &quot;financePerson&quot;, &quot;financePhone&quot;&#125;; //map中的key</span><br><span class="line"></span><br><span class="line">        // 从缓存中读取集团品牌</span><br><span class="line">        ValueOperations tokenCache = redisTemplate.opsForValue();</span><br><span class="line">        ObjectMapper objectMapper = new ObjectMapper();</span><br><span class="line">        List&lt;HotelCompanyVO&gt; hotelCompanyVOList = new ArrayList&lt;&gt;();</span><br><span class="line">        try &#123;</span><br><span class="line">            String jsonStr = objectMapper.writeValueAsString(tokenCache.get(ZDKStoreConstant.HOTEL_COMPANY_BRAND));</span><br><span class="line">            JavaType t = objectMapper.getTypeFactory().constructParametricType(List.class, HotelCompanyVO.class);</span><br><span class="line">            hotelCompanyVOList = objectMapper.readValue(jsonStr, t);</span><br><span class="line">        &#125; catch (JsonProcessingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        SXSSFWorkbook wb = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            wb = new SXSSFWorkbook(size);</span><br><span class="line">            wb.setCompressTempFiles(true); //压缩临时文件避免磁盘写满</span><br><span class="line">            Sheet sh = wb.createSheet();</span><br><span class="line"></span><br><span class="line">            for (int j = 0; j &lt; export_times; j++) &#123;</span><br><span class="line">                int beginSize = j * size;</span><br><span class="line"></span><br><span class="line">                List&lt;HotelDraftVO&gt; hotelDraftVOList = hotelDraftVOService.getHotelsByPage(beginDt, endDt, pno, cno, ano, isApply, status, key, beginSize, size);</span><br><span class="line"></span><br><span class="line">                if (!CollectionUtils.isEmpty(hotelCompanyVOList)) &#123;</span><br><span class="line">                    for (HotelDraftVO hotelDraftVO : hotelDraftVOList) &#123;</span><br><span class="line"></span><br><span class="line">                        for (HotelCompanyVO hotelCompanyVO : hotelCompanyVOList) &#123;</span><br><span class="line">                            if (hotelCompanyVO.getId().equals(hotelDraftVO.getHotelCompanyId())) &#123;</span><br><span class="line">                                hotelDraftVO.setHotelCompany(hotelCompanyVO.getLabel());</span><br><span class="line"></span><br><span class="line">                                List&lt;HotelCompanyBrandVO&gt; list1 = hotelCompanyVO.getChildren();</span><br><span class="line">                                for (HotelCompanyBrandVO hotelCompanyBrandVO : list1) &#123;</span><br><span class="line">                                    if (hotelCompanyBrandVO.getId().equals(hotelDraftVO.getHotelCompanyBrandId())) &#123;</span><br><span class="line">                                        hotelDraftVO.setHotelCompanyBrand(hotelCompanyBrandVO.getLabel());</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                List&lt;Map&lt;String, Object&gt;&gt; list = createExcelRecord(hotelDraftVOList);</span><br><span class="line"></span><br><span class="line">                ExcelUtils.export(wb, sh, columnNames, keys, list, beginSize, hotelDraftVOList.size());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">//            用户直接下载</span><br><span class="line">//            response.setContentType(&quot;application/vnd.ms-excel;charset=utf-8&quot;);</span><br><span class="line">//            response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">//            response.setHeader(&quot;Content-Disposition&quot;,&quot;attachment;filename=&quot;+new String((fileName+&quot;.xlsx&quot;).getBytes(),&quot;iso-8859-1&quot;));</span><br><span class="line">//            wb.write(response.getOutputStream());</span><br><span class="line"></span><br><span class="line">            // 异步请求，导出到服务器</span><br><span class="line">            FileOutputStream out = new FileOutputStream(url + fileName + &quot;.xlsx&quot;);</span><br><span class="line">            wb.write(out);</span><br><span class="line">            out.close();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            if (wb != null) &#123;</span><br><span class="line">                wb.dispose(); //压缩临时文件避免磁盘写满</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        File file = new File(url + fileName + &quot;.xlsx&quot;);</span><br><span class="line">        String fileSize = FileUtils.getFileSize(file);</span><br><span class="line"></span><br><span class="line">        manageFeignClient.updateExcelRecord(recordId, 1, fileSize);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Util-CreateExcelRecord"><a href="#Util-CreateExcelRecord" class="headerlink" title="Util-CreateExcelRecord"></a>Util-CreateExcelRecord</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">private List&lt;Map&lt;String, Object&gt;&gt; createExcelRecord(List&lt;HotelDraftVO&gt; hotelDraftVOList) &#123;</span><br><span class="line">        List&lt;Map&lt;String, Object&gt;&gt; listmap = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();</span><br><span class="line">        HotelDraftVO hotelDraftVO = null;</span><br><span class="line"></span><br><span class="line">        for (int j = 0; j &lt; hotelDraftVOList.size(); j++) &#123;</span><br><span class="line">            hotelDraftVO = hotelDraftVOList.get(j);</span><br><span class="line">            Map&lt;String, Object&gt; mapValue = new HashMap&lt;String, Object&gt;();</span><br><span class="line">            mapValue.put(&quot;hotelId&quot;, hotelDraftVO.getHotelId()); //1</span><br><span class="line">            mapValue.put(&quot;pname&quot;, hotelDraftVO.getPname());</span><br><span class="line">            mapValue.put(&quot;cname&quot;, hotelDraftVO.getCname());</span><br><span class="line">            mapValue.put(&quot;aname&quot;, hotelDraftVO.getAname());</span><br><span class="line">            mapValue.put(&quot;name&quot;, hotelDraftVO.getName()); //5</span><br><span class="line">            mapValue.put(&quot;address&quot;, hotelDraftVO.getAddress());</span><br><span class="line">            mapValue.put(&quot;hotelCompany&quot;, hotelDraftVO.getHotelCompany());</span><br><span class="line">            mapValue.put(&quot;hotelCompanyBrand&quot;, hotelDraftVO.getHotelCompanyBrand());</span><br><span class="line">            mapValue.put(&quot;hotelLevel&quot;, hotelDraftVO.getHotelLevel());</span><br><span class="line">            mapValue.put(&quot;allStatus&quot;, hotelDraftVO.getAllStatus()); //10</span><br><span class="line">            mapValue.put(&quot;onlineDtStr&quot;, hotelDraftVO.getOnlineDtStr());</span><br><span class="line">            mapValue.put(&quot;businessPerson&quot;, hotelDraftVO.getBusinessPerson());</span><br><span class="line">            mapValue.put(&quot;businessPhone&quot;, hotelDraftVO.getBusinessPhone());</span><br><span class="line">            mapValue.put(&quot;contactPerson&quot;, hotelDraftVO.getContactPerson());</span><br><span class="line">            mapValue.put(&quot;contactPhone&quot;, hotelDraftVO.getContactPhone()); //15</span><br><span class="line">            mapValue.put(&quot;financePerson&quot;, hotelDraftVO.getFinancePerson());</span><br><span class="line">            mapValue.put(&quot;financePhone&quot;, hotelDraftVO.getFinancePhone());</span><br><span class="line">            listmap.add(mapValue);</span><br><span class="line">        &#125;</span><br><span class="line">        return listmap;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Util-ExcelUtils"><a href="#Util-ExcelUtils" class="headerlink" title="Util-ExcelUtils"></a>Util-ExcelUtils</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">public final class ExcelUtils &#123;</span><br><span class="line"></span><br><span class="line">    private ExcelUtils() &#123;</span><br><span class="line">        throw new UnsupportedOperationException(&quot;cannot be instantiated&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void export(SXSSFWorkbook wb, Sheet sh, String columnNames[], String[] keys, List&lt;Map&lt;String,Object&gt;&gt; list, int beginSize, int size) &#123;</span><br><span class="line">        CellStyle cs = wb.createCellStyle();</span><br><span class="line">        CellStyle cs2 = wb.createCellStyle();</span><br><span class="line"></span><br><span class="line">        Font f = wb.createFont();</span><br><span class="line">        Font f2 = wb.createFont();</span><br><span class="line"></span><br><span class="line">        f.setFontHeightInPoints((short) 10);</span><br><span class="line">        f.setColor(IndexedColors.BLACK.getIndex());</span><br><span class="line">        f.setBoldweight(Font.BOLDWEIGHT_BOLD);</span><br><span class="line"></span><br><span class="line">        f2.setFontHeightInPoints((short) 10);</span><br><span class="line">        f2.setColor(IndexedColors.BLACK.getIndex());</span><br><span class="line"></span><br><span class="line">        cs.setFont(f);</span><br><span class="line">        cs.setFillForegroundColor(IndexedColors.AQUA.getIndex());</span><br><span class="line">        cs.setFillPattern(CellStyle.SOLID_FOREGROUND);</span><br><span class="line">        cs.setBorderLeft(CellStyle.BORDER_THIN);</span><br><span class="line">        cs.setBorderRight(CellStyle.BORDER_THIN);</span><br><span class="line">        cs.setBorderTop(CellStyle.BORDER_THIN);</span><br><span class="line">        cs.setBorderBottom(CellStyle.BORDER_THIN);</span><br><span class="line">        cs.setAlignment(CellStyle.ALIGN_CENTER);</span><br><span class="line"></span><br><span class="line">        cs2.setFont(f2);</span><br><span class="line">        cs2.setBorderLeft(CellStyle.BORDER_THIN);</span><br><span class="line">        cs2.setBorderRight(CellStyle.BORDER_THIN);</span><br><span class="line">        cs2.setBorderTop(CellStyle.BORDER_THIN);</span><br><span class="line">        cs2.setBorderBottom(CellStyle.BORDER_THIN);</span><br><span class="line">        cs2.setAlignment(CellStyle.ALIGN_CENTER);</span><br><span class="line"></span><br><span class="line">        if(0 == beginSize) &#123;</span><br><span class="line">            Row rowTitle = sh.createRow(0);</span><br><span class="line"></span><br><span class="line">            for(int i=0;i&lt;columnNames.length;i++)&#123;</span><br><span class="line">                Cell cell = rowTitle.createCell(i);</span><br><span class="line">                cell.setCellValue(columnNames[i]);</span><br><span class="line">                cell.setCellStyle(cs);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for(int i=0; i&lt;size; i++) &#123;</span><br><span class="line">            Row row = sh.createRow(beginSize+i+1);</span><br><span class="line"></span><br><span class="line">            for(int k=0; k&lt;keys.length; k++) &#123;</span><br><span class="line">                Cell cell = row.createCell(k);</span><br><span class="line">                cell.setCellValue(list.get(i).get(keys[k]) == null?&quot; &quot;: list.get(i).get(keys[k]).toString());</span><br><span class="line">                cell.setCellStyle(cs2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Util-readToBuffer"><a href="#Util-readToBuffer" class="headerlink" title="Util-readToBuffer"></a>Util-readToBuffer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">     * 将文本文件中的内容读入到buffer中</span><br><span class="line">     * @param buffer</span><br><span class="line">     * @param filePath</span><br><span class="line">     * @throws IOException</span><br><span class="line">     */</span><br><span class="line">    public static void readToBuffer(StringBuffer buffer, String filePath) throws IOException &#123;</span><br><span class="line">        InputStream is = new FileInputStream(filePath);</span><br><span class="line">        String line; // 用来保存每行读取的内容</span><br><span class="line">        BufferedReader reader = new BufferedReader(new InputStreamReader(is));</span><br><span class="line">        line = reader.readLine(); // 读取第一行</span><br><span class="line">        while (line != null) &#123; // 如果 line 为空说明读完了</span><br><span class="line">            buffer.append(line); // 将读到的内容添加到 buffer 中</span><br><span class="line">            line = reader.readLine(); // 读取下一行</span><br><span class="line">        &#125;</span><br><span class="line">        reader.close();</span><br><span class="line">        is.close();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.csdn.net/happyljw/article/details/52809244" target="_blank" rel="noopener">http://blog.csdn.net/happyljw/article/details/52809244</a><br><a href="http://blog.csdn.net/gao_chun/article/details/37651857" target="_blank" rel="noopener">http://blog.csdn.net/gao_chun/article/details/37651857</a><br><a href="http://blog.csdn.net/evangel_z/article/details/7332535" target="_blank" rel="noopener">http://blog.csdn.net/evangel_z/article/details/7332535</a><br>(获取文件内容)<a href="http://outofmemory.cn/code-snippet/1807/java-duqu-file-content-come-string" target="_blank" rel="noopener">http://outofmemory.cn/code-snippet/1807/java-duqu-file-content-come-string</a><br>(获取文件大小)<a href="http://blog.sina.com.cn/s/blog_6b759ccf0102wqyo.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_6b759ccf0102wqyo.html</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POI、java、util</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.joofont.com/2018/06/30/POIExcel/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/28/Svn/" class="archive-article-date">
-  	<time datetime="2017-10-28T13:16:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/06/30/MySQL/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/30/MyISAM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL存储引擎</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/28/Svn/">Svn搭建</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SVN</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+    <section id="comments">
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="POI导出Excel解决方案" ></div> 
+        <script type="text/javascript"> 
+        (function(){ 
+        var appid = 'cytiiq6ug'; 
+        var conf = 'prod_97bf6c8b8cf07f4644716a68f5e7af71'; 
+        var width = window.innerWidth || document.documentElement.clientWidth; 
+        if (width < 960) { 
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    </section>
+  
 
 
           </div>
@@ -297,8 +395,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

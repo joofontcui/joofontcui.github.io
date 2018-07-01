@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.joofont.com">
-  <title>Archives: 2017/10 | 崔俊的博客</title>
+  <title>微信公众号支付 | 崔俊的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生苦短，我用python">
-<meta name="keywords" content="开发者,程序猿编程,代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="崔俊的博客">
-<meta property="og:url" content="http://www.joofont.com/archives/2017/10/index.html">
+  <meta name="description" content="官方文档  开发文档：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3  员工账号管理：http://kf.qq.com/faq/140225MveaUz150107EvMfyq.html  管理员配置证书：https://pay.weixin.qq.com/index.php/core/cert#  设置授权域名">
+<meta name="keywords" content="微信、支付、第三方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信公众号支付">
+<meta property="og:url" content="http://www.joofont.com/2018/06/30/wechatPay/index.html">
 <meta property="og:site_name" content="崔俊的博客">
-<meta property="og:description" content="人生苦短，我用python">
+<meta property="og:description" content="官方文档  开发文档：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3  员工账号管理：http://kf.qq.com/faq/140225MveaUz150107EvMfyq.html  管理员配置证书：https://pay.weixin.qq.com/index.php/core/cert#  设置授权域名">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-30T04:52:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="崔俊的博客">
-<meta name="twitter:description" content="人生苦短，我用python">
+<meta name="twitter:title" content="微信公众号支付">
+<meta name="twitter:description" content="官方文档  开发文档：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3  员工账号管理：http://kf.qq.com/faq/140225MveaUz150107EvMfyq.html  管理员配置证书：https://pay.weixin.qq.com/index.php/core/cert#  设置授权域名">
   
     <link rel="alternative" href="/atom.xml" title="崔俊的博客" type="application/atom+xml">
   
@@ -158,114 +159,211 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-wechatPay" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/Nexus/" class="archive-article-date">
-  	<time datetime="2017-10-31T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/Nexus/">Nexus搭建</a>
+    <h1 class="article-title" itemprop="name">
+      微信公众号支付
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/30/wechatPay/" class="archive-article-date">
+  	<time datetime="2018-06-30T04:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><ul>
+<li style="list-style: none"><input type="checkbox" checked> 开发文档：<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3" target="_blank" rel="noopener">https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 员工账号管理：<a href="http://kf.qq.com/faq/140225MveaUz150107EvMfyq.html" target="_blank" rel="noopener">http://kf.qq.com/faq/140225MveaUz150107EvMfyq.html</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 管理员配置证书：<a href="https://pay.weixin.qq.com/index.php/core/cert#" target="_blank" rel="noopener">https://pay.weixin.qq.com/index.php/core/cert#</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 设置授权域名    <a id="more"></a></li>
+<li style="list-style: none"><input type="checkbox" checked> 统一下单接口:<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1" target="_blank" rel="noopener">https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 签名算法：<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3" target="_blank" rel="noopener">https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 微信内H5调起支付(jsBridge):<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6" target="_blank" rel="noopener">https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 技术人员可登进微信商户后台扫描加入接口报警群。</li>
+<li style="list-style: none"><input type="checkbox" checked> 支付结果异步通知:<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7&amp;index=8" target="_blank" rel="noopener">https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7&amp;index=8</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 设置支付目录</li>
+</ul>
+<h2 id="博文参考："><a href="#博文参考：" class="headerlink" title="博文参考："></a>博文参考：</h2><ul>
+<li style="list-style: none"><input type="checkbox" checked> <a href="https://blog.csdn.net/fengshizty/article/details/45564685" target="_blank" rel="noopener">https://blog.csdn.net/fengshizty/article/details/45564685</a></li>
+<li style="list-style: none"><input type="checkbox" checked> <a href="https://www.jianshu.com/p/02dd91e1b2ff" target="_blank" rel="noopener">https://www.jianshu.com/p/02dd91e1b2ff</a></li>
+<li style="list-style: none"><input type="checkbox" checked> [完整] <a href="http://www.cnblogs.com/deng-cc/p/7183239.html" target="_blank" rel="noopener">http://www.cnblogs.com/deng-cc/p/7183239.html</a></li>
+</ul>
+<h2 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h2><h3 id="Problem-1：商家支付时一直提示商家订单重复or已支付"><a href="#Problem-1：商家支付时一直提示商家订单重复or已支付" class="headerlink" title="Problem 1：商家支付时一直提示商家订单重复or已支付"></a>Problem 1：商家支付时一直提示商家订单重复or已支付</h3><blockquote>
+<p> 商家订单号要保证唯一，可以加时间戳尾缀。测试环境和正式环境会出现此问题</p>
+</blockquote>
+<h3 id="Problem-2-微信登录-redirect-uri参数错误"><a href="#Problem-2-微信登录-redirect-uri参数错误" class="headerlink" title="Problem 2: 微信登录 redirect_uri参数错误"></a>Problem 2: 微信登录 redirect_uri参数错误</h3><blockquote>
+<p> 微信授权白名单要跟redirect_uri一致</p>
+</blockquote>
+<h3 id="Problem-3-正式、测试切换时"><a href="#Problem-3-正式、测试切换时" class="headerlink" title="Problem 3: 正式、测试切换时"></a>Problem 3: 正式、测试切换时</h3><blockquote>
+<p> 请求的接口，服务器ip要加入公众品台IP白名单中</p>
+<p> 公众号的网页授权域要改</p>
+<p> JS接口安全域名可以多环境都加进去</p>
+<p> 如果有支付，需要修改商户平台的公众支付目录</p>
+</blockquote>
+<h3 id="Problem-4-微信支付报错：当前页面url未注册"><a href="#Problem-4-微信支付报错：当前页面url未注册" class="headerlink" title="Problem 4: 微信支付报错：当前页面url未注册"></a>Problem 4: 微信支付报错：当前页面url未注册</h3><blockquote>
+<p> 需要修改商户平台的公众支付目录</p>
+</blockquote>
+<h3 id="Problem-5：一个商户账号是否支持多个公众平台"><a href="#Problem-5：一个商户账号是否支持多个公众平台" class="headerlink" title="Problem 5：一个商户账号是否支持多个公众平台"></a>Problem 5：一个商户账号是否支持多个公众平台</h3><blockquote>
+<p>支持</p>
+<p>可授权的APPID类型：已通过微信认证的服务号、小程序；商户号企业全称与APPID认证主体一致；商户号最多可向50个APPID发起授权申请</p>
+</blockquote>
+<h3 id="Problem-6-分享提示-“errMsg”-”config-fail-Error-invalid-signature”"><a href="#Problem-6-分享提示-“errMsg”-”config-fail-Error-invalid-signature”" class="headerlink" title="Problem 6 : 分享提示{“errMsg”:”config:fail,Error: invalid signature”}"></a>Problem 6 : 分享提示{“errMsg”:”config:fail,Error: invalid signature”}</h3><blockquote>
+<p>1.检查微信ip白名单，提供服务的ip是否在其中</p>
+<p>2.在线校验工具：<a href="https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign</a></p>
+<p>3.接口文档：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BE%AE%E4%BF%A1JS-SDK%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BE%AE%E4%BF%A1JS-SDK%E6%8E%A5%E5%8F%A3</a></p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">微信、支付、第三方</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.joofont.com/2018/06/30/wechatPay/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/28/Svn/" class="archive-article-date">
-  	<time datetime="2017-10-28T13:16:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/30/mybatis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mybatis中的动态SQL</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/28/Svn/">Svn搭建</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SVN</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+    <section id="comments">
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="微信公众号支付" ></div> 
+        <script type="text/javascript"> 
+        (function(){ 
+        var appid = 'cytiiq6ug'; 
+        var conf = 'prod_97bf6c8b8cf07f4644716a68f5e7af71'; 
+        var width = window.innerWidth || document.documentElement.clientWidth; 
+        if (width < 960) { 
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    </section>
+  
 
 
           </div>
@@ -297,8 +395,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
