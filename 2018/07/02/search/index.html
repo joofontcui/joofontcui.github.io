@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.joofont.com">
-  <title>崔俊的博客</title>
+  <title>面向C端客户根据定位距离的搜索 | 崔俊的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生苦短，我用python">
-<meta name="keywords" content="开发者,程序猿编程,代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="崔俊的博客">
-<meta property="og:url" content="http://www.joofont.com/page/2/index.html">
+  <meta name="description" content="缓存中计算法逻辑 所有门店放到缓存中（redis） 模糊搜索：遍历list，根据key值是否包含在字段中，过滤掉不符合规则的实例 计算距离，并根据此字段排序 内存分页">
+<meta name="keywords" content="搜索、距离排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向C端客户根据定位距离的搜索">
+<meta property="og:url" content="http://www.joofont.com/2018/07/02/search/index.html">
 <meta property="og:site_name" content="崔俊的博客">
-<meta property="og:description" content="人生苦短，我用python">
+<meta property="og:description" content="缓存中计算法逻辑 所有门店放到缓存中（redis） 模糊搜索：遍历list，根据key值是否包含在字段中，过滤掉不符合规则的实例 计算距离，并根据此字段排序 内存分页">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-02T13:44:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="崔俊的博客">
-<meta name="twitter:description" content="人生苦短，我用python">
+<meta name="twitter:title" content="面向C端客户根据定位距离的搜索">
+<meta name="twitter:description" content="缓存中计算法逻辑 所有门店放到缓存中（redis） 模糊搜索：遍历list，根据key值是否包含在字段中，过滤掉不符合规则的实例 计算距离，并根据此字段排序 内存分页">
   
     <link rel="alternative" href="/atom.xml" title="崔俊的博客" type="application/atom+xml">
   
@@ -158,114 +159,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-redisWatch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-search" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/12/redisWatch/">秒杀系统</a>
+    <h1 class="article-title" itemprop="name">
+      面向C端客户根据定位距离的搜索
     </h1>
   
 
         
-        <a href="/2017/12/12/redisWatch/" class="archive-article-date">
-  	<time datetime="2017-12-12T14:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
+        <a href="/2018/07/02/search/" class="archive-article-date">
+  	<time datetime="2018-07-02T13:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>秒杀系统需要保证东西不多卖，关键是在多个客户端对库存进行减操作时，必须加锁。防止高并发下导致库存出现负数的情况。Redis 中的watch可以在事务前对数据进行监控，如果在事务执行前，该数据发生改变，则事务不执行。所以使用watch和事务来完成这一功能</p>
-        
-          <a class="article-more-a" href="/2017/12/12/redisWatch/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java、Redis、高并发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/12/redisWatch/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-RESTful" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/12/RESTful/">RESTful</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/12/RESTful/" class="archive-article-date">
-  	<time datetime="2017-12-12T13:29:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="越来越多的人开始意识到，网站即软件"><a href="#越来越多的人开始意识到，网站即软件" class="headerlink" title="越来越多的人开始意识到，网站即软件"></a>越来越多的人开始意识到，网站即软件</h2><h2 id="RESTful架构："><a href="#RESTful架构：" class="headerlink" title="RESTful架构："></a>RESTful架构：</h2><ul>
-<li style="list-style: none"><input type="checkbox" checked> 每一个URI代表一种资源；</li>
-<li style="list-style: none"><input type="checkbox" checked> 客户端和服务器之间，传递这种资源的某种表现层；</li>
-<li style="list-style: none"><input type="checkbox" checked> 客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。</li>
+        <h2 id="缓存中计算法"><a href="#缓存中计算法" class="headerlink" title="缓存中计算法"></a>缓存中计算法</h2><h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><ul>
+<li>所有门店放到缓存中（redis）</li>
+<li>模糊搜索：遍历list，根据key值是否包含在字段中，过滤掉不符合规则的实例</li>
+<li>计算距离，并根据此字段排序</li>
+<li>内存分页</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/12/12/RESTful/#more">more >></a>
-        
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--实现--&gt;</span><br><span class="line">@Override</span><br><span class="line">public Map getStoreDTOList(String lng, String lat, String key, Integer pageNum, Integer pageSize) &#123;</span><br><span class="line">    // 从缓存中取所有门店列表</span><br><span class="line">    Object valueObj = RedisUtil.get(redisTemplate, RedisKeyConstants.ALL_STORES);</span><br><span class="line">    if (valueObj == null || !(valueObj instanceof String)) return null;</span><br><span class="line">    List&lt;StoreDTO&gt; storeDTOList = JsonUtil.json2List((String) valueObj,new TypeToken&lt;List&lt;StoreDTO&gt;&gt;() &#123;&#125;);</span><br><span class="line">    if(CollectionUtil.isEmptyArray(storeDTOList)) return null;</span><br><span class="line"></span><br><span class="line">    // key模糊搜索</span><br><span class="line">    if(!StringUtils.isEmpty(key)) &#123;</span><br><span class="line">        List&lt;StoreDTO&gt; searchStoreDTOList = new ArrayList&lt;&gt;();</span><br><span class="line">        for(StoreDTO store : storeDTOList) &#123;</span><br><span class="line">            int index = store.getName().indexOf(key);</span><br><span class="line">            if(index != -1) searchStoreDTOList.add(store);</span><br><span class="line">        &#125;</span><br><span class="line">        storeDTOList = searchStoreDTOList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 计算距离</span><br><span class="line">    for(StoreDTO storeDTO : storeDTOList) &#123;</span><br><span class="line">        Double distanceValue = getDistance(storeDTO.getLatitude().doubleValue(),  Double.valueOf(lat), Double.valueOf(lng), storeDTO.getLongitude().doubleValue());</span><br><span class="line">        BigDecimal bg = new BigDecimal(distanceValue);</span><br><span class="line">        BigDecimal distance = bg.setScale(2, BigDecimal.ROUND_HALF_UP);</span><br><span class="line">        storeDTO.setDistance(distance);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 排序</span><br><span class="line">    storeDTOList.sort(Comparator.comparing(StoreDTO::getDistance));</span><br><span class="line"></span><br><span class="line">    // 内存分页</span><br><span class="line">    Map resultMap = PageUtil.getPagingResultMap(storeDTOList, pageNum, pageSize);</span><br><span class="line"></span><br><span class="line">    return resultMap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private double getDistance(double lat1, double lat2, double lon1, double lon2) &#123;</span><br><span class="line">    double R = 6371;</span><br><span class="line">    double distance = 0.0;</span><br><span class="line">    double dLat = (lat2 - lat1) * Math.PI / 180;</span><br><span class="line">    double dLon = (lon2 - lon1) * Math.PI / 180;</span><br><span class="line">    double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)</span><br><span class="line">            + Math.cos(lat1 * Math.PI / 180)</span><br><span class="line">            * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2)</span><br><span class="line">            * Math.sin(dLon / 2);</span><br><span class="line">    distance = (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))) * R;</span><br><span class="line">    return distance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Geohash计算法"><a href="#Geohash计算法" class="headerlink" title="Geohash计算法"></a>Geohash计算法</h2><h3 id="Geohash"><a href="#Geohash" class="headerlink" title="Geohash"></a>Geohash</h3><p>geohash算法是把二维的经纬度编码成一维的字符串，它的特点是越相近的经纬度编码后越相似，所以可以通过前缀like的方式去匹配周围的商户。spatial4j也提供了一个工具类GeohashUtils.encodeLatLon(lat, lon)，默认精度是12位。这个存储做好后，就可以通过geo_code去搜索了。拿到移动设备的经纬度，计算geo_code，这时可以指定精度计算，geo_code长度和距离的对照表：</p>
+<table>
+<thead>
+<tr>
+<th>geohash length</th>
+<th>width</th>
+<th>height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5,009.4km</td>
+<td>4,992.6km</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1,252.3km</td>
+<td>624.1km</td>
+</tr>
+<tr>
+<td>3</td>
+<td>156.5km</td>
+<td>156km</td>
+</tr>
+<tr>
+<td>4</td>
+<td>39.1km</td>
+<td>19.5km</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4.9km</td>
+<td>4.9km</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1.2km</td>
+<td>609.4m</td>
+</tr>
+<tr>
+<td>7</td>
+<td>152.9m</td>
+<td>152.4m</td>
+</tr>
+<tr>
+<td>8</td>
+<td>38.2m</td>
+<td>19m</td>
+</tr>
+<tr>
+<td>9</td>
+<td>4.8m</td>
+<td>4.8m</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.2m</td>
+<td>59.5cm</td>
+</tr>
+<tr>
+<td>11</td>
+<td>14.9cm</td>
+<td>14.9cm</td>
+</tr>
+<tr>
+<td>12</td>
+<td>3.7cm</td>
+<td>1.9cm</td>
+</tr>
+</tbody>
+</table>
+<p>geohash可以理解为把地球分为同样大的“方块”，尾数越相近则距离越近。但如果用户定位在“方块”的边缘，那临近的店铺可能就被错误的过滤掉了。则我们应当拿用户附近的8的“方块”来匹配。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GeoHash geoHash = GeoHash.withCharacterPrecision(lat, lon, 10);</span><br><span class="line">GeoHash[] adjacent = geoHash.getAdjacent();</span><br></pre></td></tr></table></figure>
+<p>sql最终变成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SELECT id, name</span><br><span class="line">FROM store</span><br><span class="line">WHERE geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;)</span><br><span class="line">OR geo_code LIKE CONCAT(?, &apos;%&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="逻辑-1"><a href="#逻辑-1" class="headerlink" title="逻辑"></a>逻辑</h3><ol>
+<li>生成新门店时，即通过经纬度计算门店Geohash</li>
+<li>计算定位的Geohash，从数据库中获取临近的门店</li>
+<li>计算距离并排序</li>
+<li>PageHelper分页</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--实现--&gt;</span><br><span class="line">@Override</span><br><span class="line">public PageInfo&lt;StoreDetailDTO&gt; getStoreDTOList(String lng, String lat, String key, Integer pageNum, Integer pageSize) &#123;</span><br><span class="line">    if(StringUtils.isEmpty(lng) || StringUtils.isEmpty(lat)) throw new StoreException(StoreEnum.ILLEGAL_REQUEST_PARAMETERS);</span><br><span class="line"></span><br><span class="line">    // 地理位置检索</span><br><span class="line">    String geoCode = GeohashUtils.encodeLatLon(Double.valueOf(lat), Double.valueOf(lng), 2);</span><br><span class="line">    GeoHash geoHash = GeoHash.withCharacterPrecision(Double.valueOf(lat), Double.valueOf(lng), 2);</span><br><span class="line">    GeoHash[] adjacent = geoHash.getAdjacent();</span><br><span class="line">    List&lt;String&gt; geoCodes = new ArrayList&lt;&gt;();</span><br><span class="line">    geoCodes.add(geoCode);</span><br><span class="line">    for (GeoHash hash : adjacent) &#123;</span><br><span class="line">        geoCodes.add(hash.toBase32());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    PageHelper.startPage(pageNum, pageSize);</span><br><span class="line"></span><br><span class="line">    List&lt;Store&gt; storeList = storeMapper.selectDistanceStore(geoCodes, key);</span><br><span class="line"></span><br><span class="line">    // 计算距离并排序</span><br><span class="line">    List&lt;StoreDetailDTO&gt; storeDetailDTOList = new ArrayList&lt;&gt;();</span><br><span class="line">    for(Store store : storeList) &#123;</span><br><span class="line">        List&lt;StoreResource&gt; storeResourceList = storeResourceService.getByStoreId(store.getId());</span><br><span class="line"></span><br><span class="line">        StoreDetailDTO storeDetailDTO = new StoreDetailDTO();</span><br><span class="line">        storeDetailDTO.setStore(store);</span><br><span class="line">        storeDetailDTO.setStoreResourceList(storeResourceList);</span><br><span class="line">        // 计算距离</span><br><span class="line">        Double distanceValue = getDistance(store.getLatitude().doubleValue(),  Double.valueOf(lat), Double.valueOf(lng), store.getLongitude().doubleValue());</span><br><span class="line">        BigDecimal bg = new BigDecimal(distanceValue);</span><br><span class="line">        BigDecimal distance = bg.setScale(2, BigDecimal.ROUND_HALF_UP);</span><br><span class="line"></span><br><span class="line">        storeDetailDTO.setDistance(distance);</span><br><span class="line">        storeDetailDTOList.add(storeDetailDTO);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    PageInfo pageInfo = new PageInfo&lt;&gt;(storeList);</span><br><span class="line"></span><br><span class="line">    // 排序</span><br><span class="line">    storeDetailDTOList.sort(Comparator.comparing(StoreDetailDTO::getDistance));</span><br><span class="line"></span><br><span class="line">    pageInfo.setList(storeDetailDTOList);</span><br><span class="line"></span><br><span class="line">    return pageInfo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ul>
+<li style="list-style: none"><input type="checkbox" checked> Github:<a href="https://github.com/jiecao-fm/hashids-java" target="_blank" rel="noopener">https://github.com/jiecao-fm/hashids-java</a>  </li>
+<li style="list-style: none"><input type="checkbox" checked> Geohash博客:<a href="https://blog.csdn.net/ghsau/article/details/50591932" target="_blank" rel="noopener">https://blog.csdn.net/ghsau/article/details/50591932</a></li>
+<li style="list-style: none"><input type="checkbox" checked> 经纬度计算距离:<a href="https://blog.csdn.net/sunhuaqiang1/article/details/47657791" target="_blank" rel="noopener">https://blog.csdn.net/sunhuaqiang1/article/details/47657791</a>    </li>
+<li style="list-style: none"><input type="checkbox" checked> 内存分页:<a href="https://blog.csdn.net/netyeaxi/article/details/78866370#commentBox" target="_blank" rel="noopener">https://blog.csdn.net/netyeaxi/article/details/78866370#commentBox</a>    </li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -276,7 +309,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搜索、距离排序</a>
         		</li>
       		
 		</ul>
@@ -285,16 +318,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/12/RESTful/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.joofont.com/2018/07/02/search/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/30/wechatPay/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信公众号支付</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -315,503 +407,17 @@
 
 
 
-  
-    <article id="post-redisForMore" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/03/redisForMore/">Redis存储复杂类型</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/03/redisForMore/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:45:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>把复杂类型转为Json存到redis,比如list/map</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;HotelCompanyVO&gt; list = hotelCompanyService.getCompanyAndBrand();</span><br><span class="line">ValueOperations tokenCache = redisTemplate.opsForValue();</span><br><span class="line">tokenCache.set(KEY.HOTEL_COMPANY_BRAND, JSON.toJSON(list));</span><br><span class="line"></span><br><span class="line">ValueOperations tokenCache = redisTemplate.opsForValue();</span><br><span class="line">List&lt;HotelCompanyVO&gt; list = (List&lt;HotelCompanyVO&gt;) tokenCache.get(KEY.HOTEL_COMPANY_BRAND);</span><br></pre></td></tr></table></figure>
-<p>参考：<br><a href="http://zhuhengwei.com/2016/01/27/Redis%E5%AD%98%E5%82%A8%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%80%9D%E8%80%83/" target="_blank" rel="noopener">http://zhuhengwei.com/2016/01/27/Redis%E5%AD%98%E5%82%A8%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%80%9D%E8%80%83/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">List/Map</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/03/redisForMore/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-proAlwaysDead" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/03/proAlwaysDead/">SpringCloud微服务经常挂掉的原因</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/03/proAlwaysDead/" class="archive-article-date">
-  	<time datetime="2017-12-03T14:21:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>springcloud项目，微服务大概有7个。本来今天跟前端同学联调差不多了，让测试同学过一遍，准备下周一提测，结果今天前端和app的同学一直反馈不同的微服务挂了。我登上终端去看了一遍日志，只有zuul的异常，再无其他log。无奈重启一个微服务，结果过了半小时，另一个微服务又挂掉了。怀疑是不是内存问题，就去top看了一下，8G内存剩0.8G，不太敢确定。无奈前端和app同学表示很着急测试，只得先kill掉两个不重要的，去google了下。  </p>
-        
-          <a class="article-more-a" href="/2017/12/03/proAlwaysDead/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/03/proAlwaysDead/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sqlGenerator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/04/sqlGenerator/">Mybatis代码生成工具</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/04/sqlGenerator/" class="archive-article-date">
-  	<time datetime="2017-11-04T09:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Mybatis 应用程序，需要大量的配置文件，对于一个成百上千的数据库表来说，完全手工配置，这是一个很恐怖的工作量. 所以 Mybatis 官方也推出了一个 Mybatis 代码生成工具的 jar 包.主要有以下功能:</p>
-<p>1.生成 pojo 与 数据库结构对应<br>2.如果有主键，能匹配主键</p>
-        
-          <a class="article-more-a" href="/2017/11/04/sqlGenerator/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/04/sqlGenerator/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Chandao" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/Chandao/">禅道搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/01/Chandao/" class="archive-article-date">
-  	<time datetime="2017-11-01T12:52:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>官网下载安装包：<a href="http://www.zentao.net/download.html" target="_blank" rel="noopener">http://www.zentao.net/download.html</a></p>
-<p>1.将安装包直接解压到/opt目录下，不要解压到别的目录再拷贝到/opt/，因为这样会导致文件的所有者和读写权限改变，也不要解压后把整个目录777权限。<br>   可以使用命令： tar -zxvf  ZenTaoPMS.7.3.stable.zbox_32.tar.gz -C /opt<br>
-        
-          <a class="article-more-a" href="/2017/11/01/Chandao/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/Chandao/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Nexus" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/Nexus/">Nexus搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/Nexus/" class="archive-article-date">
-  	<time datetime="2017-10-31T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Nexus 是Maven仓库管理器，如果你使用Maven，你可以从Maven中央仓库 下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少的内存，基于简单文件系统而非数据库。这些优点使其日趋成为最流行的Maven仓库管理器。</p>
-        
-          <a class="article-more-a" href="/2017/10/31/Nexus/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/Nexus/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Svn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/28/Svn/">Svn搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/28/Svn/" class="archive-article-date">
-  	<time datetime="2017-10-28T13:16:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="第一步：安装SVN"><a href="#第一步：安装SVN" class="headerlink" title="第一步：安装SVN"></a>第一步：安装SVN</h3><pre><code>yum install -y subversion httpd mod_dav_svn
-</code></pre><h3 id="第二步：创建SVN版本库目录"><a href="#第二步：创建SVN版本库目录" class="headerlink" title="第二步：创建SVN版本库目录"></a>第二步：创建SVN版本库目录</h3><pre><code>mkdir -p /home/svn
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/10/28/Svn/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目管理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SVN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/28/Svn/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+    <section id="comments">
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="面向C端客户根据定位距离的搜索" ></div> 
+        <script type="text/javascript"> 
+        (function(){ 
+        var appid = 'cytiiq6ug'; 
+        var conf = 'prod_97bf6c8b8cf07f4644716a68f5e7af71'; 
+        var width = window.innerWidth || document.documentElement.clientWidth; 
+        if (width < 960) { 
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    </section>
   
 
 
@@ -843,8 +449,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
