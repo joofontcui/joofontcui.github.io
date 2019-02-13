@@ -160,31 +160,59 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-errorCodeRuler" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/13/errorCodeRuler/">errorCodeRuler</a>
+      <a class="article-title" href="/2019/02/13/Maven/">Maven</a>
     </h1>
   
 
         
-        <a href="/2019/02/13/errorCodeRuler/" class="archive-article-date">
-  	<time datetime="2019-02-13T13:21:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
+        <a href="/2019/02/13/Maven/" class="archive-article-date">
+  	<time datetime="2019-02-13T13:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>为方便排查错误，定位问题。结合一些开源项目经验及己方项目的实际需求，定制服务端返回状态码，统一约束和管理。</p>
-</blockquote>
+        <h3 id="约定优于配置"><a href="#约定优于配置" class="headerlink" title="约定优于配置"></a>约定优于配置</h3><p>当创建 Maven 工程时，Maven 会创建默认的工程结构。开发者只需要合理的放置文件</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source code</td>
+<td>${basedir}/src/main/java</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>${basedir}/src/main/resources</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>${basedir}/src/test</td>
+</tr>
+<tr>
+<td>Complied byte code</td>
+<td>${basedir}/target</td>
+</tr>
+<tr>
+<td>distributable JAR</td>
+<td>${basedir}/target/classes</td>
+</tr>
+</tbody>
+</table>
         
-          <a class="article-more-a" href="/2019/02/13/errorCodeRuler/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/13/Maven/#more">more >></a>
         
       
 
@@ -198,7 +226,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">错误码</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
         		</li>
       		
 		</ul>
@@ -208,7 +236,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/13/errorCodeRuler/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/13/Maven/">展开全文 >></a>
         </p>
       
 
@@ -500,8 +528,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记录一些常用函数、方法、技巧</p>
-<h3 id="按字段指定值排序："><a href="#按字段指定值排序：" class="headerlink" title="按字段指定值排序："></a>按字段指定值排序：</h3>
+        <p>SQL执行顺序</p>
+<ol>
+<li>from </li>
+<li>join </li>
+<li>on </li>
+<li>where </li>
+<li>group by</li>
+<li>avg,sum…. </li>
+<li>having </li>
+<li>select </li>
+<li>distinct </li>
+<li>order by </li>
+</ol>
         
           <a class="article-more-a" href="/2018/06/30/MySQL/#more">more >></a>
         
@@ -813,34 +852,32 @@
 
 
   
-    <article id="post-mysqlKey" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-springMVC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/17/mysqlKey/">MySQL索引</a>
+      <a class="article-title" href="/2018/02/13/springMVC/">springMVC</a>
     </h1>
   
 
         
-        <a href="/2017/12/17/mysqlKey/" class="archive-article-date">
-  	<time datetime="2017-12-17T07:23:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
+        <a href="/2018/02/13/springMVC/" class="archive-article-date">
+  	<time datetime="2018-02-13T13:43:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><ul>
-<li>主键索引 ： 强调字段不为空，且唯一，一般会在主键字段上面添加</li>
-<li>唯一索引 ： 字段可为空，且唯一</li>
-<li>普通索引 ： 一般索引</li>
-<li>全文索引</li>
-</ul>
+        <h3 id="框架介绍："><a href="#框架介绍：" class="headerlink" title="框架介绍："></a>框架介绍：</h3><p>主要由前端控制器、处理器映射、处理器(控制器)、视图解析器、视图组成</p>
+<blockquote>
+<p>dispatch 是派遣的意思<br>处理器映射器是个map集合，可以比喻成字典<br>处理器适配器可以比喻成转接头<br>视图解析器可以比喻成幕布 </p>
+</blockquote>
         
-          <a class="article-more-a" href="/2017/12/17/mysqlKey/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/13/springMVC/#more">more >></a>
         
       
 
@@ -854,7 +891,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
         		</li>
       		
 		</ul>
@@ -864,7 +901,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/17/mysqlKey/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/13/springMVC/">展开全文 >></a>
         </p>
       
 
@@ -894,34 +931,34 @@
 
 
   
-    <article id="post-bigdecimal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-java8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/17/bigdecimal/">BigDecimal</a>
+      <a class="article-title" href="/2018/02/13/java8/">java8新特性</a>
     </h1>
   
 
         
-        <a href="/2017/12/17/bigdecimal/" class="archive-article-date">
-  	<time datetime="2017-12-16T16:25:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
+        <a href="/2018/02/13/java8/" class="archive-article-date">
+  	<time datetime="2018-02-13T13:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>float和Double只能用来做科学计算或者是工程计算;在商业计算中,对数字精度要求较高,必须使用 BigInteger 类和 BigDecimal 类</p>
-<p>构造 BigDecimal 对象常用以下方法: </p>
-<pre><code>BigDecimal BigDecimal(double d); //不允许使用  
-BigDecimal BigDecimal(String s); //常用,推荐使用  
-static BigDecimal valueOf(double d); //常用,推荐使用  
-</code></pre>
+        <h3 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h3><ul>
+<li>可选类型声明：不需要声明参数类型，编译器可以统一识别参数值。</li>
+<li>可选的参数圆括号：一个参数无需定义圆括号，但多个参数需要定义圆括号。</li>
+<li>可选的大括号：如果主体包含了一个语句，就不需要使用大括号。</li>
+<li>可选的返回关键字：如果主体只有一个表达式返回值则编译器会自动返回值，大括号需要指定明表达式返回了一个数值</li>
+</ul>
         
-          <a class="article-more-a" href="/2017/12/17/bigdecimal/#more">more >></a>
+          <a class="article-more-a" href="/2018/02/13/java8/#more">more >></a>
         
       
 
@@ -935,7 +972,7 @@ static BigDecimal valueOf(double d); //常用,推荐使用
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BigDecimal</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -945,7 +982,7 @@ static BigDecimal valueOf(double d); //常用,推荐使用
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/17/bigdecimal/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/13/java8/">展开全文 >></a>
         </p>
       
 
@@ -977,7 +1014,7 @@ static BigDecimal valueOf(double d); //常用,推荐使用
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1089,6 +1126,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Dubbo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
@@ -1113,7 +1154,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">fastJson、工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">git、gitflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">跨域、前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1133,11 +1186,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">POI、java、util</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java、Redis、高并发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
